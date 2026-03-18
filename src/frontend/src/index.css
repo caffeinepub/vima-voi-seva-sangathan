@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm beige page background: #F3E2BE */
+    --background: 0.918 0.048 85;
+    /* Dark text: #1F1F1F */
+    --foreground: 0.145 0 0;
+    /* White cards */
+    --card: 1 0 0;
+    --card-foreground: 0.145 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.145 0 0;
+    /* Orange primary: #F29A2E */
+    --primary: 0.72 0.165 65;
+    --primary-foreground: 1 0 0;
+    /* Green secondary: #1F6A3D */
+    --secondary: 0.42 0.12 155;
+    --secondary-foreground: 1 0 0;
+    --muted: 0.94 0.025 85;
+    --muted-foreground: 0.5 0.02 85;
+    /* Orange accent */
+    --accent: 0.72 0.165 65;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.87 0.04 85;
+    --input: 0.87 0.04 85;
+    --ring: 0.72 0.165 65;
+    --chart-1: 0.72 0.165 65;
+    --chart-2: 0.42 0.12 155;
+    --chart-3: 0.398 0.07 227;
+    --chart-4: 0.828 0.189 84;
+    --chart-5: 0.769 0.188 70;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.145 0 0;
+    --sidebar-primary: 0.72 0.165 65;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.94 0.025 85;
+    --sidebar-accent-foreground: 0.145 0 0;
+    --sidebar-border: 0.87 0.04 85;
+    --sidebar-ring: 0.72 0.165 65;
+
+    /* Named semantic tokens for the site */
+    --color-cream: oklch(0.96 0.025 85);
+    --color-orange: oklch(0.72 0.165 65);
+    --color-green: oklch(0.42 0.12 155);
+    --color-brown: oklch(0.52 0.1 45);
+    --color-footer: oklch(0.29 0.05 130);
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-orange {
+    color: var(--color-orange);
+  }
+  .bg-orange {
+    background-color: var(--color-orange);
+  }
+  .text-green {
+    color: var(--color-green);
+  }
+  .bg-green {
+    background-color: var(--color-green);
+  }
+  .bg-brown {
+    background-color: var(--color-brown);
+  }
+  .bg-footer {
+    background-color: var(--color-footer);
+  }
+  .bg-cream {
+    background-color: var(--color-cream);
+  }
+  .border-orange {
+    border-color: var(--color-orange);
+  }
+  .border-green {
+    border-color: var(--color-green);
+  }
+}
